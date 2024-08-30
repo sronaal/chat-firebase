@@ -7,16 +7,8 @@ const RootLayout = () => {
     const user = true
     return (
 
-        <main className="">
-            {
-                user ? 
-                (
-                   <ChatLayout/>
-                ) : 
-                (
-                    <AuthLayout/>
-                )
-            }
+        <main>
+            { user ? <ChatLayout/> :  <AuthLayout/> }
         </main>
     )
 }
