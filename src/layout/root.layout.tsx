@@ -14,7 +14,7 @@ const RootLayout = () => {
                     <h1>Bievenido!</h1>
                 ) : 
                 (
-                    <div className="h-screen bg-orange-300 grid grid-cols-2 place-content-center">
+                    <div className="h-screen bg-orange-300 grid grid-cols-2 place-content-center place-items-center">
                         <Login />
                         <Register />
                     </div>

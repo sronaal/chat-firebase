@@ -14,6 +14,7 @@ import {
   FormMessage,
 } from "@/components/ui/form"
 import { Input } from "@/components/ui/input"
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "../ui/card"
 
 
 const Login = () => {
@@ -36,47 +37,54 @@ const Login = () => {
 
   return (
 
-    <div className="bg-white p-8">
+    <Card className="">
+      <CardHeader>
+        <CardTitle>Iniciar Sesión</CardTitle>
+        <CardDescription> ¡Bievenido! Inicia sesión de nuevo </CardDescription>
+      </CardHeader>
 
-      <Form {...form}>
+      <CardContent>
+        <Form {...form}>
 
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
-          <FormField
-            control={form.control}
-            name="email"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Correo Electronico</FormLabel>
-                <FormControl>
-                  <Input placeholder="Ingrese su correo electronico" {...field} />
-                </FormControl>
+          <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8">
+            <FormField
+              control={form.control}
+              name="email"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Correo Electronico</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Ingrese su correo electronico" {...field} />
+                  </FormControl>
 
-                <FormMessage />
-              </FormItem>
-            )}
-          />
+                  <FormMessage />
+                </FormItem>
+              )}
+            />
 
-          <FormField
-            control={form.control}
-            name="password"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Contraseña</FormLabel>
-                <FormControl>
-                  <Input placeholder="Ingrese su contraseña" {...field} />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
+            <FormField
+              control={form.control}
+              name="password"
+              render={({ field }) => (
+                <FormItem>
+                  <FormLabel>Contraseña</FormLabel>
+                  <FormControl>
+                    <Input placeholder="Ingrese su contraseña" type="password" {...field} />
+                  </FormControl>
+                  <FormMessage />
+                </FormItem>
+              )}
 
-          >
+            >
 
-          </FormField>
+            </FormField>
 
-          <Button type="submit">Submit</Button>
-        </form>
-      </Form>
-    </div>
+            <Button type="submit">Submit</Button>
+          </form>
+        </Form>
+      </CardContent>
+    </Card>
+
   )
 }
 
