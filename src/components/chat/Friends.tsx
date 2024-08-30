@@ -11,7 +11,7 @@ const Friends = () => {
                     <div>Input Search</div>
                 </section>
 
-                <section className="overflow-y-auto">
+                <section className="overflow-y-auto custom-scrollbar">
                     <FriendItem/>
                     <FriendItem/>
                     <FriendItem/>
