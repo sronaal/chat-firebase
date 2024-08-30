@@ -1,10 +1,26 @@
+import Login from "@/components/auth/Login"
+import Register from "@/components/auth/Register"
+
 const RootLayout = () => {
 
 
-    const user =  false
+    const user = false
     return (
-        
-        <div> { user ? <h1>Bievenido de vuelta</h1> : <h1>Iniciar sesión</h1> } </div>
+
+        <div className="">
+            {
+                user ? 
+                (
+                    <h1>Bievenido!</h1>
+                ) : 
+                (
+                    <div className="h-screen bg-orange-300 grid grid-cols-2 place-content-center">
+                        <Login />
+                        <Register />
+                    </div>
+                )
+            }
+        </div>
     )
 }
 
