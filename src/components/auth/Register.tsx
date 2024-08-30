@@ -40,7 +40,7 @@ const Register = () => {
 
     return (
 
-        <Card className="">
+        <Card className="p-5">
             <CardHeader>
                 <CardTitle>Usuarios Nuevos</CardTitle>
                 <CardDescription> ¡Bievenido! Registrate </CardDescription>

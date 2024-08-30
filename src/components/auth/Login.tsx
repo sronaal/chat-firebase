@@ -37,7 +37,7 @@ const Login = () => {
 
   return (
 
-    <Card className="">
+    <Card className="p-5">
       <CardHeader>
         <CardTitle>Iniciar Sesión</CardTitle>
         <CardDescription> ¡Bievenido! Inicia sesión de nuevo </CardDescription>

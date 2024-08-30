@@ -1,26 +1,23 @@
-import Login from "@/components/auth/Login"
-import Register from "@/components/auth/Register"
+import ChatLayout from "./chat.layout"
+import AuthLayout from "./auth.layout"
 
 const RootLayout = () => {
 
 
-    const user = false
+    const user = true
     return (
 
-        <div className="">
+        <main className="">
             {
                 user ? 
                 (
-                    <h1>Bievenido!</h1>
+                   <ChatLayout/>
                 ) : 
                 (
-                    <div className="h-screen bg-orange-300 grid grid-cols-2 place-content-center place-items-center">
-                        <Login />
-                        <Register />
-                    </div>
+                    <AuthLayout/>
                 )
             }
-        </div>
+        </main>
     )
 }
 
