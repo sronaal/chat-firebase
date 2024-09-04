@@ -1,4 +1,6 @@
 import { Button } from "@/components/ui/button"
+import { IoCloseCircleOutline } from "react-icons/io5";
+
 
 export const MessageHeader = () => {
 
@@ -13,7 +15,9 @@ export const MessageHeader = () => {
             </div>
 
             <div className="ml-auto">
-                <Button>Close chat</Button>
+                <Button>
+                    <IoCloseCircleOutline className="text-xl"/>
+                </Button>
             </div>
         </header>
     )
