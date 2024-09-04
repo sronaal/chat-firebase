@@ -23,8 +23,14 @@ export const registerFormSchema = z.object({
     confirmPassword: z.string().min(6, "La contraseña debe tener minimo 6 caracteres")
 
 })
-    .refine((data) => data.password == data.confirmPassword, {
-        message: "Las contraseñas no coinciden"
-    }).refine((data) => data.photoUrl.size < 2 * 1024 * 1024, {
+.refine((data) => data.password == data.confirmPassword, {
+    message: "Las contraseñas no coinciden"
+})
+.refine((data) => data.photoUrl.size < 2 * 1024 * 1024, {
         message: "La imagen no puede pesar mas de 2MB"
-    })
+})
+
+export const searchFormSchema = z.object({
+
+    emails: z.string().email()
+})

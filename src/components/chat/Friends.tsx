@@ -1,4 +1,5 @@
 import FriendItem from "./Friend-item"
+import FriendSearch from "./friend-search"
 
 const Friends = () => {
 
@@ -7,8 +8,10 @@ const Friends = () => {
             <div className="grid grid-rows-[auto_1fr] h-screen">
 
                 <section className="border-b p-4">
-                    <h2>Chats</h2>
-                    <div>Input Search</div>
+                    <h2 className="text-xl font-bold text-gray-700 mb-4">Chats</h2>
+                    
+                    <FriendSearch/>
+
                 </section>
 
                 <section className="overflow-y-auto custom-scrollbar">

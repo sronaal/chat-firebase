@@ -29,7 +29,7 @@ const Login = () => {
   })
 
   // Funcion para obtener los valores
-  function onSubmit(values: z.infer<typeof loginFormSchema>) {
+  async function onSubmit(values: z.infer<typeof loginFormSchema>) {
 
     console.log(values)
 
