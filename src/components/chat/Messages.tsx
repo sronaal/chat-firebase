@@ -3,7 +3,7 @@ const Messages = () => {
     return (
 
         <>
-            <div className="bg-orange-200">
+            <div className="">
                 <h1>Messages</h1>
             </div>
         </>

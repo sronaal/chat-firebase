@@ -5,7 +5,7 @@ const Profile = () => {
 
     return (
         <>
-            <div className="p-4 text-center">
+            <div className="p-4 text-center border-l">
           
                 <h2 className="text-xl font-bold text-gray-700 mb-4">Profile</h2>
                 <img src="https://lh3.googleusercontent.com/a/ACg8ocKxESgokM1qYOlI7E8eT7TeEr_0Sqw7QkJZsvmzJoQzpYXUpRvy=s288-c-no" 
