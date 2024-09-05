@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input";
 import { useState } from "react";
-import EmojiPicker from 'emoji-picker-react';
+import EmojiPicker, { EmojiClickData } from 'emoji-picker-react';
 
 import { FaRegSmileBeam } from "react-icons/fa";
 import { IoSend } from "react-icons/io5";
@@ -11,11 +11,20 @@ export const MessageFooter = () => {
 
     const [message, setMessage] = useState("")
     const [EmojiPickerOpen, setEmojiPickerOpen] = useState(false)
-
+   
     const handleSendMessage = async () => {
 
         console.log(message)
+
+        setEmojiPickerOpen(false)
+        setMessage("")
     }
+
+    const handleSendEmoji = async (emojiData: EmojiClickData,) => {
+
+        
+        setMessage((prev) => prev +  emojiData.emoji)
+    } 
 
 
 
@@ -28,11 +37,11 @@ export const MessageFooter = () => {
             </Button>
             <div className="absolute bottom-12">
 
-                <EmojiPicker open={ EmojiPickerOpen } />
+                <EmojiPicker open={ EmojiPickerOpen } onEmojiClick={handleSendEmoji} />
             </div>
             <Input
                 placeholder="Type a messsage"
-                value={message}
+                value={ message }
                 onChange={(e) => setMessage(e.target.value)}
             />
             <Button onClick={handleSendMessage}>
