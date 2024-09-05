@@ -11,7 +11,7 @@ export const MessageFooter = () => {
 
     const [message, setMessage] = useState("")
     const [EmojiPickerOpen, setEmojiPickerOpen] = useState(false)
-   
+
     const handleSendMessage = async () => {
 
         console.log(message)
@@ -22,9 +22,9 @@ export const MessageFooter = () => {
 
     const handleSendEmoji = async (emojiData: EmojiClickData,) => {
 
-        
-        setMessage((prev) => prev +  emojiData.emoji)
-    } 
+
+        setMessage((prev) => prev + emojiData.emoji)
+    }
 
 
 
@@ -37,11 +37,11 @@ export const MessageFooter = () => {
             </Button>
             <div className="absolute bottom-12">
 
-                <EmojiPicker open={ EmojiPickerOpen } onEmojiClick={handleSendEmoji} />
+                <EmojiPicker open={EmojiPickerOpen} onEmojiClick={handleSendEmoji} />
             </div>
             <Input
                 placeholder="Type a messsage"
-                value={ message }
+                value={message}
                 onChange={(e) => setMessage(e.target.value)}
             />
             <Button onClick={handleSendMessage}>
